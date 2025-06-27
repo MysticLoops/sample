@@ -541,11 +541,6 @@ body, ._1920-w-light, .main {
   box-shadow: 0 4px 12px rgba(255,122,26,0.25);
 }
 .districts-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-bottom: 0;
-  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -598,26 +593,40 @@ body, ._1920-w-light, .main {
 }
 @media (max-width: 1100px) {
   .districts-grid {
-    grid-template-columns: repeat(2, 1fr);
     max-width: 98vw;
-    gap: 10px;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 12px !important;
   }
   .district-card {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     padding: 12px 8px;
   }
+
+  .district-selector-outer-container {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
 }
-@media (max-width: 700px) {
-  .districts-grid {
-    grid-template-columns: 1fr;
-    max-width: 98vw;
-    gap: 8px;
-  }
-  
-  .main-nav-links {
-    gap: 0.2rem;
-  }
+
+.video-title {
+  font-size: 1.2rem !important;
+  margin-bottom: 0.3rem !important;
+}
+.video-desc {
+  font-size: 0.85rem !important;
+}
+.video-embed-container iframe {
+  width: 100% !important;
+  height: 180px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  display: block;
+  margin: 0 auto;
+}
+.main-nav-links {
+  gap: 0.2rem;
 }
 
 /* =========================
@@ -948,8 +957,9 @@ body, ._1920-w-light, .main {
 }
 
 .restaurants-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    display: grid
+;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 @media (max-width: 900px) {
@@ -1363,6 +1373,120 @@ body, ._1920-w-light, .main {
   /* ... responsive styles ... */
   .nav-bar > div:first-child {
     margin-right: 1.2rem;
+  }
+  .districts-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 12px !important;
+  }
+  .district-card {
+    width: 70px;
+    height: 70px;
+    padding: 12px 8px;
+  }
+  .district-img {
+    width: 36px !important;
+    height: 36px !important;
+    margin-bottom: 0.2rem !important;
+  }
+  .district-name {
+    font-size: 0.7rem !important;
+    margin: 0 !important;
+    line-height: 1.1 !important;
+  }
+  .district-selector-outer-container {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  .section-title h2 {
+    font-size: 1rem !important;
+  }
+  .section-title p {
+    font-size: 0.8rem !important;
+  }
+  .restaurants-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+  }
+  .restaurant-card {
+    padding: 8px 4px !important;
+    font-size: 0.8rem !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+  .restaurant-image {
+    height: 60px !important;
+    font-size: 1.2rem !important;
+  }
+  .restaurant-info {
+    padding: 8px 2px !important;
+    font-size: 0.8rem !important;
+  }
+  .restaurant-name {
+    font-size: 0.8rem !important;
+  }
+  .restaurant-details {
+    font-size: 0.7rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+    align-items: flex-start !important;
+  }
+  .see-all-btn,
+  #openReviewModal {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 8px !important;
+  }
+  .see-all-btn {
+    margin-bottom: 0.3rem !important;
+  }
+  .restaurant-card .delivery-time {
+    font-size: 0.6rem !important;
+  }
+  .user-reviews-title {
+    font-size: 1rem !important;
+  }
+  .user-review-card .user-review-text {
+    font-size: 0.7rem !important;
+  }
+  .user-review-card .user-review-name {
+    font-size: 0.6rem !important;
+  }
+  .user-reviews-track {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .user-review-card {
+    min-width: 60px !important;
+    max-width: 40vw !important;
+    padding: 6px 2px !important;
+    font-size: 0.7rem !important;
+  }
+  .user-reviews-arrow {
+    display: none !important;
+  }
+  .contact-title {
+    font-size: 1rem !important;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.8rem !important;
+    padding: 0.6rem !important;
+  }
+  .contact-info-text {
+    font-size: 0.8rem !important;
+  }
+  .contact-submit {
+    font-size: 0.9rem !important;
+    padding: 0.7rem 0 !important;
+  }
+  .contact-map iframe {
+    height: 120px !important;
+    border-radius: 10px !important;
   }
 }
 
@@ -2021,7 +2145,7 @@ body, ._1920-w-light, .main {
     max-width: 99vw !important;
     min-width: 0 !important;
     min-height: unset !important;
-    margin: 1.2rem 0 !important;
+  
     box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   }
   .feature-card .feature-text, .feature-card .feature-img {
