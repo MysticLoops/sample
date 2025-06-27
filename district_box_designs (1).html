@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative District Box Content Designs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #ffffff;
+            padding: 40px 20px;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .design-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #ef4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+
+        .section-description {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .boxes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Base Box Styling */
+        .content-box {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            border: 2px solid #475569;
+            border-radius: 20px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content-box:hover {
+            transform: translateY(-8px);
+            border-color: #fbbf24;
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.2);
+        }
+
+        /* Design 1: Icon + Stats Layout */
+        .stats-box {
+            background: linear-gradient(135deg, #dc2626, #f97316);
+        }
+
+        .big-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .district-name {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            gap: 8px;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .stat-number {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fef3c7;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Design 2: Food Category Tags */
+        .category-box {
+            background: linear-gradient(135deg, #059669, #10b981);
+            text-align: left;
+        }
+
+        .district-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .location-icon {
+            font-size: 24px;
+        }
+
+        .district-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .food-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .food-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .explore-text {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        /* Design 3: Rating & Popular Dish */
+        .popular-box {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+        }
+
+        .rating-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 18px;
+        }
+
+        .rating-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .popular-dish {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 12px;
+            border-radius: 16px;
+            margin: 12px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dish-label {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .dish-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        /* Design 4: Price Range & Quick Info */
+        .info-box {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+        }
+
+        .price-range {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .price-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fbbf24;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-icon {
+            font-size: 16px;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .info-text {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Design 5: Minimal Card Style */
+        .minimal-box {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            color: #1f2937;
+            text-align: left;
+            padding: 28px 24px;
+        }
+
+        .minimal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .minimal-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: #1f2937;
+        }
+
+        .restaurant-count {
+            background: rgba(31, 41, 59, 0.1);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .minimal-subtitle {
+            font-size: 14px;
+            color: rgba(31, 41, 59, 0.8);
+            margin-bottom: 12px;
+        }
+
+        .cta-button {
+            background: rgba(31, 41, 59, 0.1);
+            border: 2px solid rgba(31, 41, 59, 0.2);
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1f2937;
+            transition: all 0.2s ease;
+        }
+
+        .minimal-box:hover .cta-button {
+            background: rgba(31, 41, 59, 0.2);
+            border-color: rgba(31, 41, 59, 0.4);
+        }
+
+        /* Design 6: Cuisine Highlights */
+        .cuisine-box {
+            background: linear-gradient(135deg, #0891b2, #06b6d4);
+        }
+
+        .cuisine-header {
+            margin-bottom: 16px;
+        }
+
+        .cuisine-icons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .cuisine-icon {
+            font-size: 24px;
+            opacity: 0.9;
+        }
+
+        .specialty-text {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Design 7: Delivery Info Focus */
+        .delivery-box {
+            background: linear-gradient(135deg, #be185d, #ec4899);
+        }
+
+        .delivery-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .delivery-time {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fef3c7;
+        }
+
+        .delivery-features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 12px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 16px;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .feature-label {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .boxes-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 15px;
+            }
+            
+            .content-box {
+                padding: 20px;
+                min-height: 140px;
+            }
+            
+            .district-name, .district-title, .minimal-title {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Design 1: Stats & Numbers -->
+        <div class="design-section">
+            <h2 class="section-title">Stats Dashboard Style</h2>
+            <p class="section-description">Detailed statistics with visual metrics</p>
+            <div class="boxes-grid">
+                <div class="content-box stats-box">
+                    <span class="big-icon">🍛</span>
+                    <div class="district-name">T. Nagar</div>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-number">45</div>
+                            <div class="stat-label">Places</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.2★</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">25min</div>
+                            <div class="stat-label">Delivery</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box stats-box">
+                    <span class="big-icon">🍜</span>
+                    <div class="district-name">Anna Nagar</div>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-number">38</div>
+                            <div class="stat-label">Places</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.4★</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">20min</div>
+                            <div class="stat-label">Delivery</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box stats-box">
+                    <span class="big-icon">🥘</span>
+                    <div class="district-name">Adyar</div>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-number">52</div>
+                            <div class="stat-label">Places</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.3★</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">30min</div>
+                            <div class="stat-label">Delivery</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box stats-box">
+                    <span class="big-icon">🍲</span>
+                    <div class="district-name">Velachery</div>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-number">29</div>
+                            <div class="stat-label">Places</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.1★</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">35min</div>
+                            <div class="stat-label">Delivery</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design 2: Food Category Tags -->
+        <div class="design-section">
+            <h2 class="section-title">Cuisine Category Style</h2>
+            <p class="section-description">Highlighting popular food categories in each area</p>
+            <div class="boxes-grid">
+                <div class="content-box category-box">
+                    <div class="district-header">
+                        <span class="location-icon">📍</span>
+                        <div class="district-title">T. Nagar</div>
+                    </div>
+                    <div class="food-tags">
+                        <span class="food-tag">South Indian</span>
+                        <span class="food-tag">Street Food</span>
+                        <span class="food-tag">Sweets</span>
+                        <span class="food-tag">Fast Food</span>
+                    </div>
+                    <div class="explore-text">Explore 45+ restaurants</div>
+                </div>
+                <div class="content-box category-box">
+                    <div class="district-header">
+                        <span class="location-icon">📍</span>
+                        <div class="district-title">Anna Nagar</div>
+                    </div>
+                    <div class="food-tags">
+                        <span class="food-tag">North Indian</span>
+                        <span class="food-tag">Chinese</span>
+                        <span class="food-tag">Pizza</span>
+                        <span class="food-tag">Cafe</span>
+                    </div>
+                    <div class="explore-text">Explore 38+ restaurants</div>
+                </div>
+                <div class="content-box category-box">
+                    <div class="district-header">
+                        <span class="location-icon">📍</span>
+                        <div class="district-title">Adyar</div>
+                    </div>
+                    <div class="food-tags">
+                        <span class="food-tag">Seafood</span>
+                        <span class="food-tag">Biryani</span>
+                        <span class="food-tag">Continental</span>
+                        <span class="food-tag">Desserts</span>
+                    </div>
+                    <div class="explore-text">Explore 52+ restaurants</div>
+                </div>
+                <div class="content-box category-box">
+                    <div class="district-header">
+                        <span class="location-icon">📍</span>
+                        <div class="district-title">Velachery</div>
+                    </div>
+                    <div class="food-tags">
+                        <span class="food-tag">Veg Meals</span>
+                        <span class="food-tag">Tiffin</span>
+                        <span class="food-tag">Bakery</span>
+                        <span class="food-tag">Juice</span>
+                    </div>
+                    <div class="explore-text">Explore 29+ restaurants</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design 3: Popular Dish Highlight -->
+        <div class="design-section">
+            <h2 class="section-title">Popular Dish Focus</h2>
+            <p class="section-description">Showcasing the most loved dishes from each area</p>
+            <div class="boxes-grid">
+                <div class="content-box popular-box">
+                    <div class="district-name">T. Nagar</div>
+                    <div class="rating-section">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.2 avg</span>
+                    </div>
+                    <div class="popular-dish">
+                        <div class="dish-label">Most Popular</div>
+                        <div class="dish-name">🍛 Chettinad Chicken</div>
+                    </div>
+                </div>
+                <div class="content-box popular-box">
+                    <div class="district-name">Anna Nagar</div>
+                    <div class="rating-section">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.4 avg</span>
+                    </div>
+                    <div class="popular-dish">
+                        <div class="dish-label">Most Popular</div>
+                        <div class="dish-name">🍜 Hakka Noodles</div>
+                    </div>
+                </div>
+                <div class="content-box popular-box">
+                    <div class="district-name">Adyar</div>
+                    <div class="rating-section">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.3 avg</span>
+                    </div>
+                    <div class="popular-dish">
+                        <div class="dish-label">Most Popular</div>
+                        <div class="dish-name">🦐 Fish Curry</div>
+                    </div>
+                </div>
+                <div class="content-box popular-box">
+                    <div class="district-name">Velachery</div>
+                    <div class="rating-section">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.1 avg</span>
+                    </div>
+                    <div class="popular-dish">
+                        <div class="dish-label">Most Popular</div>
+                        <div class="dish-name">🥘 Sambar Rice</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design 4: Price & Quick Info -->
+        <div class="design-section">
+            <h2 class="section-title">Price Range & Info</h2>
+            <p class="section-description">Quick overview with pricing and key details</p>
+            <div class="boxes-grid">
+                <div class="content-box info-box">
+                    <div class="district-name">T. Nagar</div>
+                    <div class="price-range">
+                        <span class="price-text">₹150-400</span>
+                        <span style="color: rgba(255,255,255,0.7);">per person</span>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">🚚</span>
+                            <div class="info-text">Free Delivery</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">⏱️</span>
+                            <div class="info-text">25-30 min</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box info-box">
+                    <div class="district-name">Anna Nagar</div>
+                    <div class="price-range">
+                        <span class="price-text">₹200-500</span>
+                        <span style="color: rgba(255,255,255,0.7);">per person</span>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">🚚</span>
+                            <div class="info-text">Free Delivery</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">⏱️</span>
+                            <div class="info-text">20-25 min</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box info-box">
+                    <div class="district-name">Adyar</div>
+                    <div class="price-range">
+                        <span class="price-text">₹300-800</span>
+                        <span style="color: rgba(255,255,255,0.7);">per person</span>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">🚚</span>
+                            <div class="info-text">₹25 Delivery</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">⏱️</span>
+                            <div class="info-text">30-35 min</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box info-box">
+                    <div class="district-name">Velachery</div>
+                    <div class="price-range">
+                        <span class="price-text">₹100-300</span>
+                        <span style="color: rgba(255,255,255,0.7);">per person</span>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">🚚</span>
+                            <div class="info-text">Free Delivery</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">⏱️</span>
+                            <div class="info-text">35-40 min</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design 5: Minimal Card -->
+        <div class="design-section">
+            <h2 class="section-title">Minimal Professional</h2>
+            <p class="section-description">Clean, minimal design with call-to-action</p>
+            <div class="boxes-grid">
+                <div class="content-box minimal-box">
+                    <div class="minimal-header">
+                        <div class="minimal-title">T. Nagar</div>
+                        <div class="restaurant-count">45 places</div>
+                    </div>
+                    <div class="minimal-subtitle">Shopping district with diverse dining</div>
+                    <button class="cta-button">Discover Food →</button>
+                </div>
+                <div class="content-box minimal-box">
+                    <div class="minimal-header">
+                        <div class="minimal-title">Anna Nagar</div>
+                        <div class="restaurant-count">38 places</div>
+                    </div>
+                    <div class="minimal-subtitle">Residential area with family restaurants</div>
+                    <button class="cta-button">Discover Food →</button>
+                </div>
+                <div class="content-box minimal-box">
+                    <div class="minimal-header">
+                        <div class="minimal-title">Adyar</div>
+                        <div class="restaurant-count">52 places</div>
+                    </div>
+                    <div class="minimal-subtitle">Coastal cuisine & fine dining hub</div>
+                    <button class="cta-button">Discover Food →</button>
+                </div>
+                <div class="content-box minimal-box">
+                    <div class="minimal-header">
+                        <div class="minimal-title">Velachery</div>
+                        <div class="restaurant-count">29 places</div>
+                    </div>
+                    <div class="minimal-subtitle">IT corridor with quick bites</div>
+                    <button class="cta-button">Discover Food →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design 6: Cuisine Icons -->
+        <div class="design-section">
+            <h2 class="section-title">Cuisine Highlights</h2>
+            <p class="section-description">Visual representation of food specialties</p>
+            <div class="boxes-grid">
+                <div class="content-box cuisine-box">
+                    <div class="cuisine-header">
+                        <div class="district-name">T. Nagar</div>
+                        <div class="cuisine-icons">
+                            <span class="cuisine-icon">🍛</span>
+                            <span class="cuisine-icon">🥘</span>
+                            <span class="cuisine-icon">🍬</span>
+                        </div>
+                    </div>
+                    <div class="specialty-text">"Famous for traditional South Indian meals & sweets"</div>
+                </div>
+                <div class="content-box cuisine-box">
+                    <div class="cuisine-header">
+                        <div class="district-name">Anna Nagar</div>
+                        <div class="cuisine-icons">
+                            <span class="cuisine-icon">🍜</span>
+                            <span class="cuisine-icon">🍕</span>
+                            <span class="cuisine-icon">☕</span>
+                        </div>
+                    </div>
+                    <div class="specialty-text">"Multi-cuisine hub with cafes & international food"</div>
+                </div>
+                <div class="content-box cuisine-box">
+                    <div class="cuisine-header">
+                        <div class="district-name">Adyar</div>
+                        <div class="cuisine-icons">
+                            <span class="cuisine-icon">🦐</span>
+                            <span class="cuisine-icon">🐟</span>
+                            <span class="cuisine-icon">🍰</span>
+                        </div>
+                    </div>
+                    <div class="specialty-text">"Seafood paradise with upscale dining options"</div>
+                </div>
+                <div class="content-box cuisine-box">
+                    <div class="cuisine-header">
+                        <div class="district-name">Velachery</div>
+                        <div class="cuisine-icons">
+                            <span class="cuisine-icon">🥗</span>
+                            <span class="cuisine-icon">🧋</span>
+                            <span class="cuisine-icon">🥪</span>
+                        </div>
+                    </div>
+                    <div class="specialty-text">"Healthy meals & quick bites for busy professionals"</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design 7: Delivery Focus -->
+        <div class="design-section">
+            <h2 class="section-title">Delivery Information</h2>
+            <p class="section-description">Highlighting delivery times and features</p>
+            <div class="boxes-grid">
+                <div class="content-box delivery-box">
+                    <div class="district-name">T. Nagar</div>
+                    <div class="delivery-header">
+                        <span>🚚</span>
+                        <div class="delivery-time">25 min</div>
+                        <span>avg delivery</span>
+                    </div>
+                    <div class="delivery-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">💳</span>
+                            <div class="feature-label">All Payment</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎯</span>
+                            <div class="feature-label">Live Tracking</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔥</span>
+                            <div class="feature-label">45 Hot Spots</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box delivery-box">
+                    <div class="district-name">Anna Nagar</div>
+                    <div class="delivery-header">
+                        <span>🚚</span>
+                        <div class="delivery-time">20 min</div>
+                        <span>avg delivery</span>
+                    </div>
+                    <div class="delivery-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">💳</span>
+                            <div class="feature-label">All Payment</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎯</span>
+                            <div class="feature-label">Live Tracking</div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔥</span>
+                            <div class="feature-label">38 Hot Spots

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./style.css">
+  
+  
+  <title>Wander With Foods</title>
+</head>
+<body>
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
+  <div class="nav nav-bar" style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 2vw; background: #222;">
+    <div style="display: flex; align-items: center;">
+      <img class="logo" src="logo0.png" alt="WWF logo" style="background:#000; height: 48px;" />
+    </div>
+    <nav>
+      <ul class="main-nav-links" style="display: flex; gap: 2rem; list-style: none; align-items: center; margin: 0;">
+        <li><a href="#" class="nav-link active">Home</a></li>
+        <li><a href="#video-section" class="nav-link">About</a></li>
+        <li><a href="#explore" class="nav-link">Explore</a></li>
+        <li><a href="#blogs" class="nav-link">Blogs</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- =========================
+       MAIN CONTENT WRAPPER
+       ========================= -->
+  <div class="_1920-w-light">
+    <div class="main">
+
+      <!-- =========================
+           HERO SECTION
+           ========================= -->
+      <div class="hero-section">
+        <div class="hero-left">
+          <h1 class="hero-title">Are you starving?</h1>
+          <h2 class="hero-subtitle">Within a few clicks, find<br>meals that are accessible<br>near you</h2>
+        </div>
+        <div class="hero-right">
+          <img src="hero-header0.png" alt="Food" class="noodles" style="width:480px;">
+        </div>
+      </div>
+
+      <!-- =========================
+           FEATURE CARDS (INFO SECTIONS)
+           ========================= -->
+      <div class="feature-card">
+        <div class="feature-text">
+          <h2><span class="bold">You evaluate,</span> <span class="highlight">we dish out!</span></h2>
+          <p>
+            Wander With Food believes that the best effort deserves the best reward. What better than giving you one of your favorite dishes? Get your food choices filtered - location-based and interest-based at your budget.
+          </p>
+        </div>
+        <div class="feature-img" style="background-image: url('div0.png');"></div>
+      </div>
+      <div class="feature-card reverse">
+        <div class="feature-img" style="background-image: url('div1.png');"></div>
+        <div class="feature-text">
+          <h2><span class="bold">Rate a meal,</span> <span class="highlight">get a deal! Celebrate parties with</span></h2>
+          <p>
+            We believe in the power of reviews and we would be thrilled to pay you back for yours. Each review earns you one point. 30 points wins you a dish from any restaurant, absolutely free!
+          </p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-text">
+          <h2><span class="bold">Customize your</span> <span class="highlight">order!</span></h2>
+          <p>
+            Find home-made cakes, pastries and lots of other delicious dishes served directly from the kitchens of unsung chefs.
+          </p>
+        </div>
+        <div class="feature-img" style="background-image: url('div2.png');"></div>
+      </div>
+
+      <!-- =========================
+           VIDEO SECTION
+           ========================= -->
+      <section class="video-section" id="video-section">
+        <div class="video-section-content redesigned-about">
+          <div class="about-left">
+            <h2 class="video-title">Discover More With Us</h2>
+            <p class="video-desc">Get your food choices filtered location-based and interest-based at your budget from over 1000+ dishes in our application.</p>
+          </div>
+          <div class="about-right">
+            <div class="video-embed-container">
+              <iframe src="https://www.youtube.com/embed/mjVaDx2ZeSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           DISTRICT LOCATION SELECTOR SECTION
+           ========================= -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+      <style>
+          * { margin: 0; padding: 0; box-sizing: border-box; }
+          .district-selector-outer-container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+          .district-selector-header { text-align: center; margin-bottom: 40px; color: white; }
+          .district-selector-header h1 { font-size: 2.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+          .district-selector-header p { font-size: 1.1rem; opacity: 0.9; }
+          .location-section { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+          .section-title { text-align: center; margin-bottom: 30px; }
+          .section-title h2 { color: #ffffff; font-size: 2rem; margin-bottom: 10px; }
+          .section-title p { color: #ffffff; font-size: 1rem; }
+          .location-selector { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; justify-content: center; }
+          .location-input-wrapper { position: relative; min-width: 300px; }
+          .location-input { width: 100%; padding: 15px 50px 15px 20px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 1rem; outline: none; transition: all 0.3s ease; }
+          .location-input:focus { border-color: #667eea; box-shadow: 0 0 15px rgba(102, 126, 234, 0.2); }
+          .location-icon { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #667eea; font-size: 1.2rem; }
+          .current-location-btn { display: flex; align-items: center; gap: 10px; padding: 15px 25px; background: linear-gradient(135deg, #ff6b6b, #ff8e8e); color: white; border: none; border-radius: 50px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease; white-space: nowrap; }
+          .current-location-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3); }
+          .districts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+          .restaurants-section { background: transparent; border-radius: 20px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: none; }
+          .restaurants-section.active { display: block; animation: fadeInUp 0.5s ease; }
+          @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+          .restaurants-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+          .restaurant-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer; }
+          .restaurant-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+          .restaurant-image { width: 100%; height: 180px; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; }
+          .restaurant-info { padding: 20px; }
+          .restaurant-name { font-size: 1.3rem; font-weight: 600; color: #333; margin-bottom: 8px; }
+          .restaurant-details { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+          .rating { display: flex; align-items: center; gap: 5px; color: #ff6b6b; }
+          .delivery-time { color: #666; font-size: 0.9rem; }
+          .restaurant-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+          .tag { background: #f0f0f0; color: #666; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem; }
+          .no-selection { text-align: center; color: #666; font-size: 1.1rem; padding: 60px 20px; }
+          .no-selection i { font-size: 4rem; color: #ddd; margin-bottom: 20px; }
+          @media (max-width: 768px) { .district-selector-outer-container { padding: 10px; } .location-section { padding: 20px; } .location-selector { flex-direction: column; } .location-input-wrapper { min-width: 100%; } .districts-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; } .restaurants-grid { grid-template-columns: 1fr; } }
+      </style>
+      <div class="main-content-group">
+          <div class="district-selector-header">
+              <h1>Wander With Food</h1>
+              <p>Find the best restaurants in your district</p>
+          </div>
+        <div class="district-selector-outer-container">
+          <div class="location-section">
+              <div class="location-selector">
+                  <div class="location-input-wrapper">
+                      <input type="text" class="location-input" placeholder="Search for your district..." id="locationSearch">
+                      <i class="fas fa-search location-icon"></i>
+                  </div>
+                  <button class="current-location-btn" onclick="detectLocation()">
+                      <i class="fas fa-crosshairs"></i>
+                      Use Current Location
+                  </button>
+              </div>
+              <div class="districts-grid" id="districtsGrid">
+                  <div class="district-card" onclick="selectDistrict('T. Nagar', 45)">
+                    <span class="district-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 21V8H4V6h16v2h-1v13H5zm2-2h10V8H7v11zM11 7V4h2v3h-2zM8 12h2v2H8v-2zm6 0h2v2h-2v-2z"/></svg>
+                    </span>
+                    <div class="district-name">T. Nagar</div>
+                  </div>
+                  <div class="district-card" onclick="selectDistrict('Anna Nagar', 38)">
+                    <span class="district-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 21H3v-2h2V9.82C5 8.82 5.82 8 6.82 8h10.36C18.18 8 19 8.82 19 9.82V19h2v2zM12 2a10 10 0 0 0-8.94 6H7v11h10V8h3.94A10 10 0 0 0 12 2z"/></svg>
+                    </span>
+                    <div class="district-name">Anna Nagar</div>
+                  </div>
+                  <div class="district-card" onclick="selectDistrict('Adyar', 52)">
+                    <span class="district-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 9a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-1v-6h1zM3 9a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h1v-6H3zm16 0h-5v6h5V9zM5 9h5v6H5V9zM2 17h20v2H2v-2z"/></svg>
+                    </span>
+                    <div class="district-name">Adyar</div>
+                  </div>
+                  <div class="district-card" onclick="selectDistrict('Velachery', 29)">
+                    <span class="district-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2L2 7v13h20V7L12 2zm-1 16H6v-2h5v2zm0-4H6v-2h5v2zm0-4H6V8h5v2zm7 8h-5v-2h5v2zm0-4h-5v-2h5v2zm0-4h-5V8h5v2z"/></svg>
+                    </span>
+                    <div class="district-name">Velachery</div>
+                  </div>
+                  <div class="district-card" onclick="selectDistrict('Porur', 31)">
+                    <span class="district-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0 0 12 2zm-4 13.5V8.5l6 3.5-6 3.5z"/></svg>
+                    </span>
+                    <div class="district-name">Porur</div>
+                  </div>
+                  <div class="district-card" onclick="selectDistrict('Tambaram', 24)">
+                    <span class="district-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 22v-9a8 8 0 0 1 8-8 8 8 0 0 1 8 8v9h-2v-9a6 6 0 0 0-6-6 6 6 0 0 0-6 6v9H4zm8-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+                    </span>
+                    <div class="district-name">Tambaram</div>
+                  </div>
+                  <div class="district-card" onclick="selectDistrict('OMR', 41)">
+                    <span class="district-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 22H4V8l8-6 8 6v14zM6 20h12V9.3l-6-4.5-6 4.5V20zm4-8h4v6h-4v-6z"/></svg>
+                    </span>
+                    <div class="district-name">OMR</div>
+                  </div>
+                  <div class="district-card" onclick="selectDistrict('Mylapore', 33)">
+                    <span class="district-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1l-10 4v2h2v11h16V7h2V5L12 1zm-1 18H6v-8h5v8zm2 0h5v-8h-5v8zm-8-10V7h14v2H5z"/></svg>
+                    </span>
+                    <div class="district-name">Mylapore</div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- Move these sections outside the white box -->
+        <div class="restaurants-section" id="restaurantsSection">
+            <div class="section-title">
+                <h2><i class="fas fa-utensils"></i> Restaurants in <span id="selectedDistrict">Your Area</span></h2>
+                <p>Discover amazing food options in your selected district</p>
+            </div>
+            <div class="no-selection" id="noSelection">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Select a district to view restaurants</h3>
+                <p>Choose from the districts above to see available restaurants and start ordering!</p>
+            </div>
+            <div class="restaurants-grid" id="restaurantsGrid"></div>
+            <button class="see-all-btn" id="seeAllRestaurantsBtn">View All</button>
+        </div>
+        <section class="featured-section" id="featured-must-try"></section>
+        <section class="featured-section" id="featured-ambience"></section>
+      </div>
+      <script>
+      let selectedDistrictName = '';
+      const restaurantData = { 'T. Nagar': [ { name: 'Saravana Bhavan', rating: 4.5, time: '25-30 min', cuisine: ['South Indian', 'Vegetarian'], icon: '🍛' }, { name: 'Pizza Hut', rating: 4.2, time: '30-35 min', cuisine: ['Pizza', 'Italian'], icon: '🍕' }, { name: 'KFC', rating: 4.3, time: '20-25 min', cuisine: ['Chicken', 'Fast Food'], icon: '🍗' }, { name: 'Murugan Idli Shop', rating: 4.6, time: '15-20 min', cuisine: ['South Indian', 'Breakfast'], icon: '🥞' }, { name: 'Burger King', rating: 4.1, time: '25-30 min', cuisine: ['Burgers', 'Fast Food'], icon: '🍔' }, { name: 'Sangeetha Restaurant', rating: 4.4, time: '20-25 min', cuisine: ['South Indian', 'Multi-cuisine'], icon: '🍽️' } ], 'Anna Nagar': [ { name: 'Anjappar', rating: 4.5, time: '30-35 min', cuisine: ['Chettinad', 'Non-Veg'], icon: '🍖' }, { name: 'Subway', rating: 4.0, time: '15-20 min', cuisine: ['Sandwiches', 'Healthy'], icon: '🥪' }, { name: 'Dominos Pizza', rating: 4.2, time: '25-30 min', cuisine: ['Pizza', 'Italian'], icon: '🍕' }, { name: 'Thalappakatti', rating: 4.4, time: '35-40 min', cuisine: ['Biryani', 'Non-Veg'], icon: '🍚' }, { name: 'McDonald\'s', rating: 4.1, time: '20-25 min', cuisine: ['Burgers', 'Fast Food'], icon: '🍟' } ], 'Adyar': [ { name: 'Adyar Ananda Bhavan', rating: 4.6, time: '20-25 min', cuisine: ['South Indian', 'Sweets'], icon: '🍮' }, { name: 'Zomato Kitchen', rating: 4.3, time: '25-30 min', cuisine: ['Multi-cuisine', 'Cloud Kitchen'], icon: '👨‍🍳' }, { name: 'Copper Chimney', rating: 4.4, time: '30-35 min', cuisine: ['North Indian', 'Tandoor'], icon: '🍛' }, { name: 'Cream Centre', rating: 4.2, time: '25-30 min', cuisine: ['Vegetarian', 'Continental'], icon: '🥗' }, { name: 'Barbeque Nation', rating: 4.5, time: '45-50 min', cuisine: ['Buffet', 'Grilled'], icon: '🍖' } ], 'Velachery': [ { name: 'Ponnusamy Hotel', rating: 4.4, time: '30-35 min', cuisine: ['Chettinad', 'Non-Veg'], icon: '🍖' }, { name: 'Cafe Coffee Day', rating: 4.0, time: '15-20 min', cuisine: ['Coffee', 'Snacks'], icon: '☕' }, { name: 'Wow! Momo', rating: 4.2, time: '20-25 min', cuisine: ['Momos', 'Chinese'], icon: '🥟' }, { name: 'Chai Kings', rating: 4.1, time: '10-15 min', cuisine: ['Tea', 'Snacks'], icon: '🍵' } ], 'Porur': [ { name: 'Junior Kuppanna', rating: 4.3, time: '25-30 min', cuisine: ['Andhra', 'Biryani'], icon: '🍚' }, { name: 'Starbucks', rating: 4.2, time: '15-20 min', cuisine: ['Coffee', 'Bakery'], icon: '☕' }, { name: 'Tibbs Frankie', rating: 4.1, time: '20-25 min', cuisine: ['Rolls', 'Street Food'], icon: '🌯' }, { name: 'Baskin Robbins', rating: 4.0, time: '15-20 min', cuisine: ['Ice Cream', 'Desserts'], icon: '🍦' } ], 'Tambaram': [ { name: 'Pista House', rating: 4.3, time: '30-35 min', cuisine: ['Biryani', 'Hyderabadi'], icon: '🍚' }, { name: 'Hotel Shrimaan', rating: 4.2, time: '25-30 min', cuisine: ['South Indian', 'Non-Veg'], icon: '🍛' }, { name: 'Meridian Restaurant', rating: 4.1, time: '20-25 min', cuisine: ['Multi-cuisine', 'Family'], icon: '🍽️' } ], 'OMR': [ { name: 'Absolute Barbecues', rating: 4.5, time: '40-45 min', cuisine: ['Buffet', 'Barbecue'], icon: '🍢' }, { name: 'Mad Over Donuts', rating: 4.2, time: '15-20 min', cuisine: ['Donuts', 'Desserts'], icon: '🍩' }, { name: 'Onesta', rating: 4.3, time: '25-30 min', cuisine: ['Wood Fired', 'Pizza'], icon: '🍕' }, { name: 'Smoor', rating: 4.4, time: '20-25 min', cuisine: ['Chocolate', 'Desserts'], icon: '🍫' }, { name: 'Toit', rating: 4.1, time: '35-40 min', cuisine: ['Brewery', 'Continental'], icon: '🍺' } ], 'Mylapore': [ { name: 'Ratna Cafe', rating: 4.6, time: '15-20 min', cuisine: ['Filter Coffee', 'Tiffin'], icon: '☕' }, { name: 'Hotel Saravana Bhavan', rating: 4.5, time: '20-25 min', cuisine: ['South Indian', 'Pure Veg'], icon: '🍛' }, { name: 'Sukh Sagar', rating: 4.3, time: '25-30 min', cuisine: ['North Indian', 'Chaat'], icon: '🍛' }, { name: 'Shanti Sagar', rating: 4.2, time: '20-25 min', cuisine: ['South Indian', 'Vegetarian'], icon: '🥞' } ] };
+      // Add featured data for each district
+      const featuredData = {
+        'T. Nagar': {
+          mustTry: [
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] }
+          ],
+          ambience: [
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] }
+          ]
+        },
+        'Anna Nagar': {
+          mustTry: [
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] },
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] }
+          ],
+          ambience: [
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] }
+          ]
+        },
+        'Adyar': {
+          mustTry: [
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] },
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] }
+          ],
+          ambience: [
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] },
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] }
+          ]
+        },
+        'Velachery': {
+          mustTry: [
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] }
+          ],
+          ambience: [
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] }
+          ]
+        },
+        'Porur': {
+          mustTry: [
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] },
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] }
+          ],
+          ambience: [
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] }
+          ]
+        },
+        'Tambaram': {
+          mustTry: [
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] },
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] }
+          ],
+          ambience: [
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] },
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] }
+          ]
+        },
+        'OMR': {
+          mustTry: [
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] }
+          ],
+          ambience: [
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] }
+          ]
+        },
+        'Mylapore': {
+          mustTry: [
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] },
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] }
+          ],
+          ambience: [
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] }
+          ]
+        }
+      };
+
+      function updateFeaturedSections(district) {
+        const mustTry = featuredData[district]?.mustTry || [];
+        const ambience = featuredData[district]?.ambience || [];
+        // Update Must Try Section
+        const mustTrySection = document.getElementById('featured-must-try');
+        mustTrySection.innerHTML = `
+          <div class="restaurants-section active">
+            <div class="section-title">
+              <h2><i class="fas fa-utensils"></i> Featured Restaurants in <span class="highlight">${district}</span> – Must Try Dishes</h2>
+              <p>Some of the must try dishes in <span class="highlight">${district}</span></p>
+            </div>
+            <div class="restaurants-grid">
+              ${mustTry.slice(0, 4).map(rest => `
+                <div class="restaurant-card">
+                  <div class="restaurant-image">${rest.icon}</div>
+                  <div class="restaurant-info">
+                    <div class="restaurant-name">${rest.name}</div>
+                    <div class="restaurant-details">
+                      <div class="rating"><i class="fas fa-star"></i> ${rest.rating}</div>
+                      <div class="delivery-time"><i class="fas fa-clock"></i>${rest.time}</div>
+                    </div>
+                    <div class="restaurant-tags">
+                      ${rest.cuisine.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+            <div class="button-container">
+              <button class="see-all-btn">View All</button>
+            </div>
+          </div>
+        `;
+        // Update Ambience Section
+        const ambienceSection = document.getElementById('featured-ambience');
+        ambienceSection.innerHTML = `
+          <div class="restaurants-section active">
+            <div class="section-title">
+              <h2><i class="fas fa-utensils"></i> Featured Restaurants in <span class="highlight">${district}</span> – Best in Ambience</h2>
+              <p>Some of the best ambience restaurants in <span class="highlight">${district}</span></p>
+            </div>
+            <div class="restaurants-grid">
+              ${ambience.slice(0, 4).map(rest => `
+                <div class="restaurant-card">
+                  <div class="restaurant-image">${rest.icon}</div>
+                  <div class="restaurant-info">
+                    <div class="restaurant-name">${rest.name}</div>
+                    <div class="restaurant-details">
+                      <div class="rating"><i class="fas fa-star"></i> ${rest.rating}</div>
+                      <div class="delivery-time"><i class="fas fa-clock"></i>${rest.time}</div>
+                    </div>
+                    <div class="restaurant-tags">
+                      ${rest.cuisine.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+            <div class="button-container">
+              <button class="see-all-btn">View All</button>
+            </div>
+          </div>
+        `;
+      }
+
+      function selectDistrict(districtName, restaurantCount) {
+        document.querySelectorAll('.district-card').forEach(card => { card.classList.remove('selected'); });
+        event.target.classList.add('selected');
+        selectedDistrictName = districtName;
+        document.getElementById('selectedDistrict').textContent = districtName;
+        const restaurantsSection = document.getElementById('restaurantsSection');
+        restaurantsSection.classList.add('active');
+        document.getElementById('noSelection').style.display = 'none';
+        loadRestaurants(districtName);
+        restaurantsSection.scrollIntoView({ behavior: 'smooth' });
+        updateFeaturedSections(districtName);
+        // Show featured sections when a district is selected
+        document.getElementById('featured-must-try').style.display = 'block';
+        document.getElementById('featured-ambience').style.display = 'block';
+      }
+      function loadRestaurants(districtName) { const restaurantsGrid = document.getElementById('restaurantsGrid'); const restaurants = restaurantData[districtName] || []; restaurantsGrid.innerHTML = ''; restaurants.forEach(restaurant => { const restaurantCard = document.createElement('div'); restaurantCard.className = 'restaurant-card'; restaurantCard.onclick = () => openRestaurant(restaurant.name); restaurantCard.innerHTML = `<div class="restaurant-image">${restaurant.icon}</div><div class="restaurant-info"><div class="restaurant-name">${restaurant.name}</div><div class="restaurant-details"><div class="rating"><i class="fas fa-star"></i>${restaurant.rating}</div><div class="delivery-time"><i class="fas fa-clock"></i>${restaurant.time}</div></div><div class="restaurant-tags">${restaurant.cuisine.map(tag => `<span class="tag">${tag}</span>`).join('')}</div></div>`; restaurantsGrid.appendChild(restaurantCard); }); }
+      function openRestaurant(restaurantName) { alert(`Opening ${restaurantName} menu...`); }
+      function detectLocation() { if (navigator.geolocation) { navigator.geolocation.getCurrentPosition((position) => { alert('Location detected! Finding nearest district...'); selectDistrict('T. Nagar', 45); }, (error) => { alert('Location access denied. Please select a district manually.'); }); } else { alert('Geolocation is not supported by this browser.'); } }
+      document.getElementById('locationSearch').addEventListener('input', function(e) { const searchTerm = e.target.value.toLowerCase(); const districtCards = document.querySelectorAll('.district-card'); districtCards.forEach(card => { const districtName = card.querySelector('.district-name').textContent.toLowerCase(); if (districtName.includes(searchTerm)) { card.style.display = 'block'; } else { card.style.display = 'none'; } }); });
+      document.addEventListener('DOMContentLoaded', function() { document.getElementById('noSelection').style.display = 'block'; });
+      </script>
+      <!-- DISTRICT LOCATION SELECTOR SECTION END -->
+
+    </div>
+  </div>
+
+  <!-- =========================
+       USER REVIEWS SECTION
+       ========================= -->
+  <section class="user-reviews-section">
+    <div class="user-reviews-bg"></div>
+    <div class="user-reviews-title">User Reviews</div>
+    <div class="user-reviews-carousel">
+      <button class="user-reviews-arrow left" aria-label="Scroll left">&#8592;</button>
+      <div class="user-reviews-track">
+        <div class="user-review-card highlight animated">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Saloni" class="user-avatar" />
+          <div class="user-review-text">"Absolutely loved the food and the quick delivery! Will order again."</div>
+          <div class="user-review-name">Saloni</div>
+        </div>
+        <div class="user-review-card animated">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Simpi" class="user-avatar" />
+          <div class="user-review-text">"Great variety and easy to use app. The discounts are a bonus!"</div>
+          <div class="user-review-name">Simpi</div>
+        </div>
+        <div class="user-review-card animated">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Saloni" class="user-avatar" />
+          <div class="user-review-text">"The ambience recommendations were spot on. Loved the experience!"</div>
+          <div class="user-review-name">Saloni</div>
+        </div>
+        <div class="user-review-card animated">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Amit" class="user-avatar" />
+          <div class="user-review-text">"Easy to find local gems. The review system is fun and rewarding."</div>
+          <div class="user-review-name">Amit</div>
+        </div>
+      </div>
+      <button class="user-reviews-arrow right" aria-label="Scroll right">&#8594;</button>
+    </div>
+    <button class="see-all-btn" id="openReviewModal">Write a Review</button>
+    <!-- Review Modal -->
+    <div class="review-modal" id="reviewModal">
+      <div class="review-modal-content">
+        <span class="close-modal" id="closeReviewModal">&times;</span>
+        <h3>Write a Review</h3>
+        <form class="review-form">
+          <input type="text" placeholder="Your Name" required />
+          <textarea placeholder="Your Review" rows="4" required></textarea>
+          <button type="submit" class="submit-review-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Carousel
+      var left = document.querySelector('.user-reviews-arrow.left');
+      var right = document.querySelector('.user-reviews-arrow.right');
+      var track = document.querySelector('.user-reviews-track');
+      left.onclick = function() {
+        track.scrollBy({left: -340, behavior: 'smooth'});
+      };
+      right.onclick = function() {
+        track.scrollBy({left: 340, behavior: 'smooth'});
+      };
+      // Fade-in animation for cards
+      var cards = document.querySelectorAll('.user-review-card.animated');
+      cards.forEach(function(card, i) {
+        setTimeout(function() {
+          card.classList.add('fade-in');
+        }, 200 + i * 200);
+      });
+      // Modal logic
+      var modal = document.getElementById('reviewModal');
+      var openBtn = document.getElementById('openReviewModal');
+      var closeBtn = document.getElementById('closeReviewModal');
+      openBtn.onclick = function() {
+        modal.style.display = 'flex';
+      };
+      closeBtn.onclick = function() {
+        modal.style.display = 'none';
+      };
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      };
+      // Prevent form submit (demo only)
+      document.querySelector('.review-form').onsubmit = function(e) {
+        e.preventDefault();
+        alert('Thank you for your review! (Demo only)');
+        modal.style.display = 'none';
+      };
+    });
+  </script>
+  <!-- =========================
+       END USER REVIEWS SECTION
+       ========================= -->
+
+  <!-- =========================
+       CONTACT US SECTION
+       ========================= -->
+  <section class="contact-section" id="contact">
+    <div style="text-align:center; margin-bottom:2rem;">
+      <h2 class="contact-title">Contact Us</h2>
+    </div>
+    <div class="contact-container">
+      <div class="contact-left">
+        <div class="contact-info-block">
+          <div class="contact-icon">
+            <svg width="24" height="24" fill="none" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 21s-6-5.686-6-10A6 6 0 0 1 18 11c0 4.314-6 10-6 10z"></path><circle cx="12" cy="11" r="3"></circle></svg>
+          </div>
+          <div class="contact-info-text">
+            25/15, Teachers Colony 4th Street,<br>
+            Kumarananthapuram,<br>
+            Tirupur - 641 602,<br>
+            Tamil Nadu, India.
+          </div>
+        </div>
+        <div class="contact-info-block">
+          <div class="contact-icon">
+            <svg width="24" height="24" fill="none" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg>
+          </div>
+          <div class="contact-info-text">
+            support@wanderwithfood.com
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps?q=Kumarananthapuram,+Tirupur,+Tamil+Nadu,+India&output=embed" width="100%" height="180" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form class="contact-form">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="text" placeholder="Phone Number" required>
+          <input type="text" placeholder="Address">
+          <textarea placeholder="Comment" rows="4"></textarea>
+          <button type="submit" class="contact-submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- =========================
+       END CONTACT US SECTION
+       ========================= -->
+
+  <!-- =========================
+       MODERN FOOTER SECTION
+       ========================= -->
+  <footer class="modern-footer">
+    <div class="footer-copyright">Copyright © 2024 BINI</div>
+  </footer>
+
+  <!-- =========================
+       SCRIPTS
+       ========================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var deliveryTab = document.querySelector('.delivery-tab');
+      var pickupTab = document.querySelector('.pickup-tab');
+      function setMode(mode) {
+        if(mode === 'Delivery') {
+          deliveryTab.classList.add('active');
+          pickupTab.classList.remove('active');
+          deliveryTab.setAttribute('aria-pressed', 'true');
+          pickupTab.setAttribute('aria-pressed', 'false');
+        } else {
+          deliveryTab.classList.remove('active');
+          pickupTab.classList.add('active');
+          deliveryTab.setAttribute('aria-pressed', 'false');
+          pickupTab.setAttribute('aria-pressed', 'true');
+        }
+      }
+      deliveryTab.addEventListener('click', function() { setMode('Delivery'); });
+      pickupTab.addEventListener('click', function() { setMode('Pickup'); });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var left = document.querySelector('.carousel-arrow.left');
+      var right = document.querySelector('.carousel-arrow.right');
+      var track = document.querySelector('.carousel-track');
+      left.onclick = function() {
+        track.scrollBy({left: -280, behavior: 'smooth'});
+      };
+      right.onclick = function() {
+        track.scrollBy({left: 280, behavior: 'smooth'});
+      };
+    });
+
+    // Featured section navigation arrows
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.featured-nav-arrows').forEach(function(nav) {
+        var grid = nav.querySelector('.featured-grid');
+        var left = nav.querySelector('.featured-arrow.left');
+        var right = nav.querySelector('.featured-arrow.right');
+        if (!grid || !left || !right) return;
+        // Get card width dynamically
+        function getCardWidth() {
+          var card = grid.querySelector('.featured-card');
+          if (!card) return 200;
+          var style = window.getComputedStyle(card);
+          var width = card.offsetWidth + parseInt(style.marginLeft) + parseInt(style.marginRight);
+          return width;
+        }
+        left.onclick = function() {
+          grid.scrollBy({left: -getCardWidth(), behavior: 'smooth'});
+        };
+        right.onclick = function() {
+          grid.scrollBy({left: getCardWidth(), behavior: 'smooth'});
+        };
+      });
+    });
+
+    // Place selector dynamic update logic
+    document.getElementById('place-selector').addEventListener('change', function() {
+      const place = this.value;
+      // Show loading state
+      document.getElementById('spotlight-section').innerHTML = '<p>Loading...</p>';
+      document.getElementById('featured-must-try').innerHTML = '<p>Loading...</p>';
+      document.getElementById('featured-ambience').innerHTML = '<p>Loading...</p>';
+
+      fetch(`/api/data?place=${place}`)
+        .then(response => response.json())
+        .then(data => {
+          updateSpotlightSection(data.spotlight);
+          updateFeaturedSection('featured-must-try', data.featuredMustTry, 'Must Try Dishes');
+          updateFeaturedSection('featured-ambience', data.featuredAmbience, 'Best in Ambience');
+        })
+        .catch(() => {
+          document.getElementById('spotlight-section').innerHTML = '<p>Failed to load data.</p>';
+          document.getElementById('featured-must-try').innerHTML = '<p>Failed to load data.</p>';
+          document.getElementById('featured-ambience').innerHTML = '<p>Failed to load data.</p>';
+        });
+    });
+
+    function updateSpotlightSection(spotlightData) {
+      const section = document.getElementById('spotlight-section');
+      section.innerHTML = `
+        <h2 class="spotlight-title">Spotlight</h2>
+        <div class="spotlight-subtitle">
+          Some of the must try dishes in <span class="highlight">${spotlightData.place}</span>
+        </div>
+        <div class="spotlight-carousel">
+          <button class="carousel-arrow left">&#8592;</button>
+          <div class="carousel-track">
+            ${spotlightData.dishes.map(dish => `              <div class="spotlight-card">
+                <img src="${dish.img}" alt="${dish.name}" class="spotlight-img" />
+                <div class="spotlight-info">
+                  <div class="dish-title">${dish.name}</div>
+                  <div class="dish-restaurant"><span class="loc">&#x1F4CD;</span> ${dish.restaurant}</div>
+                  <div class="dish-price">${dish.price}</div>
+                  <button class="order-btn">Order now</button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+          <button class="carousel-arrow right">&#8594;</button>
+        </div>
+      `;
+      attachSpotlightCarouselListeners();
+    }
+
+    function updateFeaturedSection(sectionId, featuredData, title) {
+      const section = document.getElementById(sectionId);
+      section.innerHTML = `
+        <h2 class="featured-title">Featured Restaurants – ${title} of ${featuredData.place}</h2>
+        <div class="featured-subtitle">
+          Some of the ${title.toLowerCase()} in <span class="highlight">${featuredData.place}</span>
+        </div>
+        <div class="featured-nav-arrows">
+          <button class="featured-arrow left" aria-label="Scroll left">&#8592;</button>
+          <div class="featured-grid">
+            ${featuredData.restaurants.map(rest => `
+              <div class="featured-card">
+                <div class="featured-img" style="background-image: url('${rest.img}');">
+                  <span class="badge discount">${rest.discount}</span>
+                  <span class="badge fast">Fast</span>
+                </div>
+                <div class="featured-info">
+                  <img src="${rest.logo}" class="rest-logo" alt="${rest.name} logo" />
+                  <div class="rest-name">${rest.name}</div>
+                  <div class="rest-rating">&#11088; ${rest.rating}</div>
+                  <div class="rest-status ${rest.open ? 'open' : 'closed'}">${rest.open ? 'Open Now' : 'Opens Tomorrow'}</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+          <button class="featured-arrow right" aria-label="Scroll right">&#8594;</button>
+        </div>
+        <div class="button-container">
+          <button class="view-all-btn">View All <span>&#8594;</span></button>
+        </div>
+      `;
+      attachFeaturedArrowsListeners(sectionId);
+    }
+
+    // Re-attach carousel arrow event listeners for spotlight
+    function attachSpotlightCarouselListeners() {
+      var left = document.querySelector('#spotlight-section .carousel-arrow.left');
+      var right = document.querySelector('#spotlight-section .carousel-arrow.right');
+      var track = document.querySelector('#spotlight-section .carousel-track');
+      if (left && right && track) {
+        left.onclick = function() {
+          track.scrollBy({left: -280, behavior: 'smooth'});
+        };
+        right.onclick = function() {
+          track.scrollBy({left: 280, behavior: 'smooth'});
+        };
+      }
+    }
+
+    // Re-attach featured section arrow event listeners
+    function attachFeaturedArrowsListeners(sectionId) {
+      var nav = document.querySelector(`#${sectionId} .featured-nav-arrows`);
+      if (!nav) return;
+      var grid = nav.querySelector('.featured-grid');
+      var left = nav.querySelector('.featured-arrow.left');
+      var right = nav.querySelector('.featured-arrow.right');
+      if (!grid || !left || !right) return;
+      function getCardWidth() {
+        var card = grid.querySelector('.featured-card');
+        if (!card) return 200;
+        var style = window.getComputedStyle(card);
+        var width = card.offsetWidth + parseInt(style.marginLeft) + parseInt(style.marginRight);
+        return width;
+      }
+      left.onclick = function() {
+        grid.scrollBy({left: -getCardWidth(), behavior: 'smooth'});
+      };
+      right.onclick = function() {
+        grid.scrollBy({left: getCardWidth(), behavior: 'smooth'});
+      };
+    }
+  </script>
+
+</body>
+</html>
+
+
+

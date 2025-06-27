@@ -1,0 +1,124 @@
+/* Figma Styles of your File */
+:root {
+  /* Colors */
+  --139596120-black-125: rgba(0, 0, 0, 0.12);
+  --139596120-boulder: #757575;
+  --139596120-cinderella: #eeeeee;
+  --139596120-cod-gray: #1a1a1a;
+  --139596120-dove-gray: #616161;
+  --139596120-gallery: #eeeeee;
+  --139596120-loafer: #ebf5e2;
+  --139596120-mine-shaft: #212121;
+  --139596120-my-sin: #ffbb26;
+  --139596120-piper: #cd6122;
+  --139596120-piper: #c15b20;
+  --139596120-rose-white: #fffefe;
+  --139596120-silver: #bdbdbd;
+  --139596120-sun: #ffb30e;
+  --139596120-sunglow: #ffbe32;
+  --139596120-sushi: #79b93c;
+  --139596120-tango: #f17228;
+  --139596120-tango-15: rgba(241, 114, 40, 0.15);
+  --139596120-tundora: #424242;
+  --139596120-white-lilac: #f9fafd;
+  --139596120-white-rose-white: linear-gradient(to left, #fffefe, #fffefe),
+    linear-gradient(to left, #ffffff, #ffffff);
+  --139596120-wild-sand: #f5f5f5;
+
+  /* Fonts */
+  --139596120-source-sans-pro-bold-font-family: SourceSansPro-Bold, sans-serif;
+  --139596120-source-sans-pro-bold-font-size: 16px;
+  --139596120-source-sans-pro-bold-line-height: 24px;
+  --139596120-source-sans-pro-bold-font-weight: 700;
+  --139596120-source-sans-pro-bold-font-style: normal;
+  --139596120-source-sans-pro-bold-font-family: SourceSansPro-Bold, sans-serif;
+  --139596120-source-sans-pro-bold-font-size: 16px;
+  --139596120-source-sans-pro-bold-line-height: 13px;
+  --139596120-source-sans-pro-bold-font-weight: 700;
+  --139596120-source-sans-pro-bold-font-style: normal;
+  --139596120-source-sans-pro-regular-font-family: SourceSansPro-Regular,
+    sans-serif;
+  --139596120-source-sans-pro-regular-font-size: 16px;
+  --139596120-source-sans-pro-regular-line-height: 24px;
+  --139596120-source-sans-pro-regular-font-weight: 400;
+  --139596120-source-sans-pro-regular-font-style: normal;
+  --139596120-source-sans-pro-bold-font-family: SourceSansPro-Bold, sans-serif;
+  --139596120-source-sans-pro-bold-font-size: 19.200000762939453px;
+  --139596120-source-sans-pro-bold-line-height: 13px;
+  --139596120-source-sans-pro-bold-font-weight: 700;
+  --139596120-source-sans-pro-bold-font-style: normal;
+  --139596120-source-sans-pro-regular-font-family: SourceSansPro-Regular,
+    sans-serif;
+  --139596120-source-sans-pro-regular-font-size: 19.200000762939453px;
+  --139596120-source-sans-pro-regular-line-height: 28.8px;
+  --139596120-source-sans-pro-regular-font-weight: 400;
+  --139596120-source-sans-pro-regular-font-style: normal;
+  --139596120-semantic-heading-1-font-family: SourceSansPro-Bold, sans-serif;
+  --139596120-semantic-heading-1-font-size: 33.20000076293945px;
+  --139596120-semantic-heading-1-line-height: 39.81px;
+  --139596120-semantic-heading-1-font-weight: 700;
+  --139596120-semantic-heading-1-font-style: normal;
+  --139596120-semantic-heading-1-font-family: SourceSansPro-Black, sans-serif;
+  --139596120-semantic-heading-1-font-size: 68.80000305175781px;
+  --139596120-semantic-heading-1-line-height: 68.8px;
+  --139596120-semantic-heading-1-font-weight: 900;
+  --139596120-semantic-heading-1-font-style: normal;
+  --139596120-semantic-heading-1-font-family: SourceSansPro-Bold, sans-serif;
+  --139596120-semantic-heading-1-font-size: 39.79999923706055px;
+  --139596120-semantic-heading-1-line-height: 47.78px;
+  --139596120-semantic-heading-1-font-weight: 700;
+  --139596120-semantic-heading-1-font-style: normal;
+  --139596120-semantic-heading-3-font-family: SourceSansPro-Bold, sans-serif;
+  --139596120-semantic-heading-3-font-size: 27.600000381469727px;
+  --139596120-semantic-heading-3-line-height: 33.18px;
+  --139596120-semantic-heading-3-font-weight: 700;
+  --139596120-semantic-heading-3-font-style: normal;
+  --139596120-semantic-heading-5-font-family: SourceSansPro-Bold, sans-serif;
+  --139596120-semantic-heading-5-font-size: 19.200000762939453px;
+  --139596120-semantic-heading-5-line-height: 23.04px;
+  --139596120-semantic-heading-5-font-weight: 700;
+  --139596120-semantic-heading-5-font-style: normal;
+  --139596120-semantic-heading-5-font-family: SourceSansPro-Bold, sans-serif;
+  --139596120-semantic-heading-5-font-size: 19.200000762939453px;
+  --139596120-semantic-heading-5-line-height: 38.4px;
+  --139596120-semantic-heading-5-font-weight: 700;
+  --139596120-semantic-heading-5-font-style: normal;
+  --139596120-semantic-heading-5-font-family: SourceSansPro-Bold, sans-serif;
+  --139596120-semantic-heading-5-font-size: 39.79999923706055px;
+  --139596120-semantic-heading-5-line-height: 49.77px;
+  --139596120-semantic-heading-5-font-weight: 700;
+  --139596120-semantic-heading-5-font-style: normal;
+  --139596120-semantic-input-font-family: SourceSansPro-Regular, sans-serif;
+  --139596120-semantic-input-font-size: 16px;
+  --139596120-semantic-input-line-height: normal;
+  --139596120-semantic-input-font-weight: 400;
+  --139596120-semantic-input-font-style: normal;
+
+  /* Effects */
+}
+/* Figma Color Variables of your File */
+:root,
+[data-139596120-mode="mode-1"] {
+  /* mode-1 */
+  --color-orange-55: #f17228;
+  --color-grey-10: #1a1a1a;
+  --color-grey-46: #757575;
+  --color-orange-53: #ffb30e;
+  --color-grey-100: #fffefe;
+  --color-grey-38: #616161;
+  --color-grey-74: #bdbdbd;
+  --color-orange-47: #cd6122;
+  --color-orange-44: #c15b20;
+  --color-orange-60: #ffbe32;
+  --color-orange-57: #ffbb26;
+  --color-orange-55-15: rgba(241, 114, 40, 0.15);
+  --color-grey-96: #f5f5f5;
+  --color-white-solid: #ffffff;
+  --color-grey-98: #f9fafd;
+  --color-black-125: rgba(0, 0, 0, 0.12);
+  --color-grey-93: #eeeeee;
+  --color-grey-13: #212121;
+  --color-grey-26: #424242;
+  --color-grey-92: #ebf5e2;
+  --color-chartreuse-green-48: #79b93c;
+}
