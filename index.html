@@ -138,7 +138,7 @@
           .tag { background: #f0f0f0; color: #666; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem; }
           .no-selection { text-align: center; color: #666; font-size: 1.1rem; padding: 60px 20px; }
           .no-selection i { font-size: 4rem; color: #ddd; margin-bottom: 20px; }
-          @media (max-width: 768px) { .district-selector-outer-container { padding: 10px; } .location-section { padding: 20px; } .location-selector { flex-direction: column; } .location-input-wrapper { min-width: 100%; } .districts-grid { grid-template-columns: repeat(auto-fit, minmax(60,1fr)); gap: 15px; } .restaurants-grid { grid-template-columns: 1fr; } }
+          @media (max-width: 768px) { .district-selector-outer-container { padding: 10px; } .location-section { padding: 20px; } .location-selector { flex-direction: column; } .location-input-wrapper { min-width: 100%; }  .restaurants-grid { grid-template-columns: 1fr; } }
       </style>
       <div class="main-content-group" id="district-selector">
           <div class="district-selector-header">
@@ -228,7 +228,7 @@
       </div>
       <script>
       let selectedDistrictName = '';
-      const restaurantData = { 'T. Nagar': [ { name: 'Saravana Bhavan', rating: 4.5, time: '25-30 min', cuisine: ['South Indian', 'Vegetarian'], icon: '🍛' }, { name: 'Pizza Hut', rating: 4.2, time: '30-35 min', cuisine: ['Pizza', 'Italian'], icon: '🍕' }, { name: 'KFC', rating: 4.3, time: '20-25 min', cuisine: ['Chicken', 'Fast Food'], icon: '🍗' }, { name: 'Murugan Idli Shop', rating: 4.6, time: '15-20 min', cuisine: ['South Indian', 'Breakfast'], icon: '🥞' }, { name: 'Burger King', rating: 4.1, time: '25-30 min', cuisine: ['Burgers', 'Fast Food'], icon: '🍔' }, { name: 'Sangeetha Restaurant', rating: 4.4, time: '20-25 min', cuisine: ['South Indian', 'Multi-cuisine'], icon: '🍽️' } ], 'Anna Nagar': [ { name: 'Anjappar', rating: 4.5, time: '30-35 min', cuisine: ['Chettinad', 'Non-Veg'], icon: '🍖' }, { name: 'Subway', rating: 4.0, time: '15-20 min', cuisine: ['Sandwiches', 'Healthy'], icon: '🥪' }, { name: 'Dominos Pizza', rating: 4.2, time: '25-30 min', cuisine: ['Pizza', 'Italian'], icon: '🍕' }, { name: 'Thalappakatti', rating: 4.4, time: '35-40 min', cuisine: ['Biryani', 'Non-Veg'], icon: '🍚' }, { name: 'McDonald\'s', rating: 4.1, time: '20-25 min', cuisine: ['Burgers', 'Fast Food'], icon: '🍟' } ], 'Adyar': [ { name: 'Adyar Ananda Bhavan', rating: 4.6, time: '20-25 min', cuisine: ['South Indian', 'Sweets'], icon: '🍮' }, { name: 'Zomato Kitchen', rating: 4.3, time: '25-30 min', cuisine: ['Multi-cuisine', 'Cloud Kitchen'], icon: '👨‍🍳' }, { name: 'Copper Chimney', rating: 4.4, time: '30-35 min', cuisine: ['North Indian', 'Tandoor'], icon: '🍛' }, { name: 'Cream Centre', rating: 4.2, time: '25-30 min', cuisine: ['Vegetarian', 'Continental'], icon: '🥗' }, { name: 'Barbeque Nation', rating: 4.5, time: '45-50 min', cuisine: ['Buffet', 'Grilled'], icon: '🍖' } ], 'Velachery': [ { name: 'Ponnusamy Hotel', rating: 4.4, time: '30-35 min', cuisine: ['Chettinad', 'Non-Veg'], icon: '🍖' }, { name: 'Cafe Coffee Day', rating: 4.0, time: '15-20 min', cuisine: ['Coffee', 'Snacks'], icon: '☕' }, { name: 'Wow! Momo', rating: 4.2, time: '20-25 min', cuisine: ['Momos', 'Chinese'], icon: '🥟' }, { name: 'Chai Kings', rating: 4.1, time: '10-15 min', cuisine: ['Tea', 'Snacks'], icon: '🍵' } ], 'Porur': [ { name: 'Junior Kuppanna', rating: 4.3, time: '25-30 min', cuisine: ['Andhra', 'Biryani'], icon: '🍚' }, { name: 'Starbucks', rating: 4.2, time: '15-20 min', cuisine: ['Coffee', 'Bakery'], icon: '☕' }, { name: 'Tibbs Frankie', rating: 4.1, time: '20-25 min', cuisine: ['Rolls', 'Street Food'], icon: '🌯' }, { name: 'Baskin Robbins', rating: 4.0, time: '15-20 min', cuisine: ['Ice Cream', 'Desserts'], icon: '🍦' } ], 'Tambaram': [ { name: 'Pista House', rating: 4.3, time: '30-35 min', cuisine: ['Biryani', 'Hyderabadi'], icon: '🍚' }, { name: 'Hotel Shrimaan', rating: 4.2, time: '25-30 min', cuisine: ['South Indian', 'Non-Veg'], icon: '🍛' }, { name: 'Meridian Restaurant', rating: 4.1, time: '20-25 min', cuisine: ['Multi-cuisine', 'Family'], icon: '🍽️' } ], 'OMR': [ { name: 'Absolute Barbecues', rating: 4.5, time: '40-45 min', cuisine: ['Buffet', 'Barbecue'], icon: '🍢' }, { name: 'Mad Over Donuts', rating: 4.2, time: '15-20 min', cuisine: ['Donuts', 'Desserts'], icon: '🍩' }, { name: 'Onesta', rating: 4.3, time: '25-30 min', cuisine: ['Wood Fired', 'Pizza'], icon: '🍕' }, { name: 'Smoor', rating: 4.4, time: '20-25 min', cuisine: ['Chocolate', 'Desserts'], icon: '🍫' }, { name: 'Toit', rating: 4.1, time: '35-40 min', cuisine: ['Brewery', 'Continental'], icon: '🍺' } ], 'Mylapore': [ { name: 'Ratna Cafe', rating: 4.6, time: '15-20 min', cuisine: ['Filter Coffee', 'Tiffin'], icon: '☕' }, { name: 'Hotel Saravana Bhavan', rating: 4.5, time: '20-25 min', cuisine: ['South Indian', 'Pure Veg'], icon: '🍛' }, { name: 'Sukh Sagar', rating: 4.3, time: '25-30 min', cuisine: ['North Indian', 'Chaat'], icon: '🍛' }, { name: 'Shanti Sagar', rating: 4.2, time: '20-25 min', cuisine: ['South Indian', 'Vegetarian'], icon: '🥞' } ] };
+      const restaurantData = { 'T. Nagar': [ { name: 'Saravana Bhavan', rating: 4.5, time: '25-30 min', cuisine: ['South Indian', 'Vegetarian'], icon: '🍛' }, { name: 'Pizza Hut', rating: 4.2, time: '30-35 min', cuisine: ['Pizza', 'Italian'], icon: '🍕' }, { name: 'KFC', rating: 4.3, time: '20-25 min', cuisine: ['Chicken', 'Fast Food'], icon: '🍗' }, { name: 'Murugan Idli Shop', rating: 4.6, time: '15-20 min', cuisine: ['South Indian', 'Breakfast'], icon: '🥞' }, { name: 'Burger King', rating: 4.1, time: '25-30 min', cuisine: ['Burgers', 'Fast Food'], icon: '🍔' }, { name: 'Sangeetha Restaurant', rating: 4.4, time: '20-25 min', cuisine: ['South Indian', 'Multi-cuisine'], icon: '🍽️' } ], 'Anna Nagar': [ { name: 'Anjappar', rating: 4.5, time: '30-35 min', cuisine: ['Chettinad', 'Non-Veg'], icon: '🍖' }, { name: 'Subway', rating: 4.0, time: '15-20 min', cuisine: ['Sandwiches', 'Healthy'], icon: '🥪' }, { name: 'Dominos Pizza', rating: 4.2, time: '25-30 min', cuisine: ['Pizza', 'Italian'], icon: '🍕' }, { name: 'Thalappakatti', rating: 4.4, time: '35-40 min', cuisine: ['Biryani', 'Non-Veg'], icon: '🍚' }, { name: 'McDonald\'s', rating: 4.1, time: '20-25 min', cuisine: ['Burgers', 'Fast Food'], icon: '🍟' } ], 'Adyar': [ { name: 'Adyar Ananda Bhavan', rating: 4.6, time: '20-25 min', cuisine: ['South Indian', 'Sweets'], icon: '🍮' }, { name: 'Zomato Kitchen', rating: 4.3, time: '25-30 min', cuisine: ['Multi-cuisine', 'Cloud Kitchen'], icon: '👨‍🍳' }, { name: 'Copper Chimney', rating: 4.4, time: '30-35 min', cuisine: ['North Indian', 'Tandoor'], icon: '🍛' }, { name: 'Cream Centre', rating: 4.2, time: '25-30 min', cuisine: ['Vegetarian', 'Continental'], icon: '🥗' }, { name: 'Barbeque Nation', rating: 4.5, time: '45-50 min', cuisine: ['Buffet', 'Grilled'], icon: '🍖' } ], 'Velachery': [ { name: 'Ponnusamy Hotel', rating: 4.4, time: '30-35 min', cuisine: ['Chettinad', 'Non-Veg'], icon: '🍖' }, { name: 'Cafe Coffee Day', rating: 4.0, time: '15-20 min', cuisine: ['Coffee', 'Snacks'], icon: '☕' }, { name: 'Wow! Momo', rating: 4.2, time: '20-25 min', cuisine: ['Momos', 'Chinese'], icon: '🥟' }, { name: 'Chai Kings', rating: 4.1, time: '10-15 min', cuisine: ['Tea', 'Snacks'], icon: '🍵' } ], 'Porur': [ { name: 'Junior Kuppanna', rating: 4.3, time: '25-30 min', cuisine: ['Andhra', 'Biryani'], icon: '🍚' }, { name: 'Starbucks', rating: 4.2, time: '15-20 min', cuisine: ['Coffee', 'Bakery'], icon: '☕' }, { name: 'Tibbs Frankie', rating: 4.1, time: '20-25 min', cuisine: ['Rolls', 'Street Food'], icon: '🌯' }, { name: 'Baskin Robbins', rating: 4.0, time: '15-20 min', cuisine: ['Ice Cream', 'Desserts'], icon: '🍦' } ], 'Tambaram': [ { name: 'Pista House', rating: 4.3, time: '30-35 min', cuisine: ['Biryani', 'Hyderabadi'], icon: '🍚' }, { name: 'Hotel Shrimaan', rating: 4.2, time: '25-30 min', cuisine: ['South Indian', 'Non-Veg'], icon: '🍛' }, { name: 'Meridian Restaurant', rating: 4.1, time: '20-25 min', cuisine: ['Multi-cuisine', 'Family'], icon: '🍽️' } ], 'ECR': [ { name: 'Absolute Barbecues', rating: 4.5, time: '40-45 min', cuisine: ['Buffet', 'Barbecue'], icon: '🍢' }, { name: 'Mad Over Donuts', rating: 4.2, time: '15-20 min', cuisine: ['Donuts', 'Desserts'], icon: '🍩' }, { name: 'Onesta', rating: 4.3, time: '25-30 min', cuisine: ['Wood Fired', 'Pizza'], icon: '🍕' }, { name: 'Smoor', rating: 4.4, time: '20-25 min', cuisine: ['Chocolate', 'Desserts'], icon: '🍫' }, { name: 'Toit', rating: 4.1, time: '35-40 min', cuisine: ['Brewery', 'Continental'], icon: '🍺' } ], 'Mylapore': [ { name: 'Ratna Cafe', rating: 4.6, time: '15-20 min', cuisine: ['Filter Coffee', 'Tiffin'], icon: '☕' }, { name: 'Hotel Saravana Bhavan', rating: 4.5, time: '20-25 min', cuisine: ['South Indian', 'Pure Veg'], icon: '🍛' }, { name: 'Sukh Sagar', rating: 4.3, time: '25-30 min', cuisine: ['North Indian', 'Chaat'], icon: '🍛' }, { name: 'Shanti Sagar', rating: 4.2, time: '20-25 min', cuisine: ['South Indian', 'Vegetarian'], icon: '🥞' } ] };
       // Add featured data for each district
       const featuredData = {
         'T. Nagar': {
@@ -279,11 +279,86 @@
             { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] }
           ]
         },
-        'Velachery': [ { name: 'Ponnusamy Hotel', rating: 4.4, time: '30-35 min', cuisine: ['Chettinad', 'Non-Veg'], icon: '🍖' }, { name: 'Cafe Coffee Day', rating: 4.0, time: '15-20 min', cuisine: ['Coffee', 'Snacks'], icon: '☕' }, { name: 'Wow! Momo', rating: 4.2, time: '20-25 min', cuisine: ['Momos', 'Chinese'], icon: '🥟' }, { name: 'Chai Kings', rating: 4.1, time: '10-15 min', cuisine: ['Tea', 'Snacks'], icon: '🍵' } ],
-        'Porur': [ { name: 'Junior Kuppanna', rating: 4.3, time: '25-30 min', cuisine: ['Andhra', 'Biryani'], icon: '🍚' }, { name: 'Starbucks', rating: 4.2, time: '15-20 min', cuisine: ['Coffee', 'Bakery'], icon: '☕' }, { name: 'Tibbs Frankie', rating: 4.1, time: '20-25 min', cuisine: ['Rolls', 'Street Food'], icon: '🌯' }, { name: 'Baskin Robbins', rating: 4.0, time: '15-20 min', cuisine: ['Ice Cream', 'Desserts'], icon: '🍦' } ],
-        'Tambaram': [ { name: 'Pista House', rating: 4.3, time: '30-35 min', cuisine: ['Biryani', 'Hyderabadi'], icon: '🍚' }, { name: 'Hotel Shrimaan', rating: 4.2, time: '25-30 min', cuisine: ['South Indian', 'Non-Veg'], icon: '🍛' }, { name: 'Meridian Restaurant', rating: 4.1, time: '20-25 min', cuisine: ['Multi-cuisine', 'Family'], icon: '🍽️' } ],
-        'OMR': [ { name: 'Absolute Barbecues', rating: 4.5, time: '40-45 min', cuisine: ['Buffet', 'Barbecue'], icon: '🍢' }, { name: 'Mad Over Donuts', rating: 4.2, time: '15-20 min', cuisine: ['Donuts', 'Desserts'], icon: '🍩' }, { name: 'Onesta', rating: 4.3, time: '25-30 min', cuisine: ['Wood Fired', 'Pizza'], icon: '🍕' }, { name: 'Smoor', rating: 4.4, time: '20-25 min', cuisine: ['Chocolate', 'Desserts'], icon: '🍫' }, { name: 'Toit', rating: 4.1, time: '35-40 min', cuisine: ['Brewery', 'Continental'], icon: '🍺' } ],
-        'Mylapore': [ { name: 'Ratna Cafe', rating: 4.6, time: '15-20 min', cuisine: ['Filter Coffee', 'Tiffin'], icon: '☕' }, { name: 'Hotel Saravana Bhavan', rating: 4.5, time: '20-25 min', cuisine: ['South Indian', 'Pure Veg'], icon: '🍛' }, { name: 'Sukh Sagar', rating: 4.3, time: '25-30 min', cuisine: ['North Indian', 'Chaat'], icon: '🍛' }, { name: 'Shanti Sagar', rating: 4.2, time: '20-25 min', cuisine: ['South Indian', 'Vegetarian'], icon: '🥞' } ]
+        'Velachery': {
+          mustTry: [
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] }
+          ],
+          ambience: [
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] }
+          ]
+        },
+        'Porur': {
+          mustTry: [
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] },
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] }
+          ],
+          ambience: [
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] }
+          ]
+        },
+        'Tambaram': {
+          mustTry: [
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] },
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] }
+          ],
+          ambience: [
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] },
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] }
+          ]
+        },
+        'ECR':{
+          mustTry: [
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] }
+          ],
+          ambience: [
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] }
+          ]
+        },
+        'Mylapore': {
+          mustTry: [
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div16.png', name: 'Ruby tuesday', logo: 'ruby-tuesday-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍝', time: '30-35 min', cuisine: ['Italian'] },
+            { img: 'div17.png', name: 'Kuakata Fried Chicken', logo: 'kuakata-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] },
+            { img: 'div18.png', name: 'Kuakata Fried Chicken', logo: 'red-square-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🍗', time: '20-25 min', cuisine: ['Chicken'] }
+          ],
+          ambience: [
+            { img: 'div19.png', name: 'Taco bell', logo: 'taco-bell-logo-png0.png', rating: 50, discount: '10% off', open: true, icon: '🌮', time: '25-30 min', cuisine: ['Mexican'] },
+            { img: 'div12.png', name: 'Food world', logo: 'food-world-logo-png0.png', rating: 46, discount: '20% off', open: false, icon: '🍔', time: '20-25 min', cuisine: ['Fast Food'] },
+            { img: 'div13.png', name: 'Pizza hub', logo: 'pizzahub-logo-png0.png', rating: 40, discount: '10% off', open: false, icon: '🍕', time: '25-30 min', cuisine: ['Pizza'] },
+            { img: 'div14.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 20, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] },
+            { img: 'div15.png', name: 'Donuts hut', logo: 'donuts-hut-logo-png0.png', rating: 50, discount: '15% off', open: true, icon: '🍩', time: '15-20 min', cuisine: ['Desserts'] }
+          ]
+        }
       };
 
       function updateFeaturedSections(district) {
@@ -306,9 +381,6 @@
                     <div class="restaurant-details">
                       <div class="rating"><i class="fas fa-star"></i> ${rest.rating}</div>
                       <div class="delivery-time"><i class="fas fa-clock"></i>${rest.time}</div>
-                    </div>
-                    <div class="restaurant-tags">
-                      ${rest.cuisine.map(tag => `<span class="tag">${tag}</span>`).join('')}
                     </div>
                   </div>
                 </div>
@@ -337,9 +409,6 @@
                       <div class="rating"><i class="fas fa-star"></i> ${rest.rating}</div>
                       <div class="delivery-time"><i class="fas fa-clock"></i>${rest.time}</div>
                     </div>
-                    <div class="restaurant-tags">
-                      ${rest.cuisine.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                    </div>
                   </div>
                 </div>
               `).join('')}
@@ -366,7 +435,7 @@
         document.getElementById('featured-must-try').style.display = 'block';
         document.getElementById('featured-ambience').style.display = 'block';
       }
-      function loadRestaurants(districtName) { const restaurantsGrid = document.getElementById('restaurantsGrid'); const restaurants = restaurantData[districtName] || []; restaurantsGrid.innerHTML = ''; restaurants.forEach(restaurant => { const restaurantCard = document.createElement('div'); restaurantCard.className = 'restaurant-card'; restaurantCard.onclick = () => openRestaurant(restaurant.name); restaurantCard.innerHTML = `<div class="restaurant-image">${restaurant.icon}</div><div class="restaurant-info"><div class="restaurant-name">${restaurant.name}</div><div class="restaurant-details"><div class="rating"><i class="fas fa-star"></i>${restaurant.rating}</div><div class="delivery-time"><i class="fas fa-clock"></i>${restaurant.time}</div></div><div class="restaurant-tags">${restaurant.cuisine.map(tag => `<span class="tag">${tag}</span>`).join('')}</div></div>`; restaurantsGrid.appendChild(restaurantCard); }); }
+      function loadRestaurants(districtName) { const restaurantsGrid = document.getElementById('restaurantsGrid'); const restaurants = restaurantData[districtName] || []; restaurantsGrid.innerHTML = ''; restaurants.forEach(restaurant => { const restaurantCard = document.createElement('div'); restaurantCard.className = 'restaurant-card'; restaurantCard.onclick = () => openRestaurant(restaurant.name); restaurantCard.innerHTML = `<div class="restaurant-image">${restaurant.icon}</div><div class="restaurant-info"><div class="restaurant-name">${restaurant.name}</div><div class="restaurant-details"><div class="rating"><i class="fas fa-star"></i>${restaurant.rating}</div><div class="delivery-time"><i class="fas fa-clock"></i>${restaurant.time}</div></div></div>`; restaurantsGrid.appendChild(restaurantCard); }); }
       function openRestaurant(restaurantName) { alert(`Opening ${restaurantName} menu...`); }
       function detectLocation() { if (navigator.geolocation) { navigator.geolocation.getCurrentPosition((position) => { alert('Location detected! Finding nearest district...'); selectDistrict('T. Nagar', 45); }, (error) => { alert('Location access denied. Please select a district manually.'); }); } else { alert('Geolocation is not supported by this browser.'); } }
       document.getElementById('locationSearch').addEventListener('input', function(e) { const searchTerm = e.target.value.toLowerCase(); const districtCards = document.querySelectorAll('.district-card'); districtCards.forEach(card => { const districtName = card.querySelector('.district-name').textContent.toLowerCase(); if (districtName.includes(searchTerm)) { card.style.display = 'block'; } else { card.style.display = 'none'; } }); });
