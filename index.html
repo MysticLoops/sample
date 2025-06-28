@@ -110,22 +110,21 @@
           .district-selector-header { text-align: center; margin-bottom: 40px; color: white; }
           .district-selector-header h1 { font-size: 2.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
           .district-selector-header p { font-size: 1.1rem; opacity: 0.9; }
-          .location-section { background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
           .section-title { text-align: center; margin-bottom: 30px; }
           .section-title h2 { color: #ffffff; font-size: 2rem; margin-bottom: 10px; }
           .section-title p { color: #ffffff; font-size: 1rem; }
           .location-selector { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; justify-content: center; }
           .location-input-wrapper { position: relative; min-width: 300px; }
-          .location-input { width: 100%; padding: 15px 50px 15px 20px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 1rem; outline: none; transition: all 0.3s ease; }
+          .location-input { width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 1rem; outline: none; transition: all 0.3s ease; }
           .location-input:focus { border-color: #667eea; box-shadow: 0 0 15px rgba(102, 126, 234, 0.2); }
           .location-icon { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #667eea; font-size: 1.2rem; }
           .current-location-btn { display: flex; align-items: center; gap: 10px; padding: 15px 25px; background: linear-gradient(135deg, #ff6b6b, #ff8e8e); color: white; border: none; border-radius: 50px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease; white-space: nowrap; }
           .current-location-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3); }
-          .districts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+          .districts-grid { gap: 20px; margin-bottom: 20px; }
           .restaurants-section { background: transparent; border-radius: 20px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: none; }
           .restaurants-section.active { display: block; animation: fadeInUp 0.5s ease; }
           @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-          .restaurants-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+          .restaurants-grid { display: grid; }
           .restaurant-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer; }
           .restaurant-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
           .restaurant-image { width: 100%; height: 180px; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; }
@@ -138,7 +137,7 @@
           .tag { background: #f0f0f0; color: #666; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem; }
           .no-selection { text-align: center; color: #666; font-size: 1.1rem; padding: 60px 20px; }
           .no-selection i { font-size: 4rem; color: #ddd; margin-bottom: 20px; }
-          @media (max-width: 768px) { .district-selector-outer-container { padding: 10px; } .location-section { padding: 20px; } .location-selector { flex-direction: column; } .location-input-wrapper { min-width: 100%; }  .restaurants-grid { grid-template-columns: 1fr; } }
+          @media (max-width: 768px) { .district-selector-outer-container { padding: 10px; } .location-selector { flex-direction: column; } .location-input-wrapper { min-width: 100%; }  }
       </style>
       <div class="main-content-group" id="district-selector">
           <div class="district-selector-header">
